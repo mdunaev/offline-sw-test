@@ -5,8 +5,18 @@ this.addEventListener('install', function(event){
 })
 
 this.addEventListener('fetch', function(event){
+
+  var headers = new Headers();
+  myHeaders.append('pragma', 'no-cache');
+  myHeaders.append('cache-control', 'no-cache');
+
+  var init = {
+    method: 'GET',
+    headers: myHeaders,
+  };
+
   event.respondWith(
-    fetch(event.request.url+'#'+Math.random()).catch(function() {
+    fetch(event.request.url, init).catch(function() {
       return new Response("<html><body><h1>OFFLINE</h1></body></html>");
     })
   );
