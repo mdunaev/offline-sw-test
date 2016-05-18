@@ -14,7 +14,7 @@ this.addEventListener('fetch', function(event){
     });
   }))
 
-  new Response('<h1>Offline mode!</h1>', {
+  return new Response('<h1>Offline mode!</h1>', {
       headers: { 'Content-Type': 'text/html' }
     });
 })
