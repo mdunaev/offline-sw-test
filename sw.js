@@ -8,7 +8,7 @@ this.addEventListener('fetch', function(event){
   console.log('fetch')
   console.log(event)
 
-  event.respondWith( fetch(event.request).catch(function(err){
+  event.respondWith( fetch(event.request.url).catch(function(err){
       var response = new Response('<h1>Offline mode!</h1>')
       return response
     })
