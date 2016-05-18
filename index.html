@@ -4,5 +4,20 @@
   </head>
   <body>
     ready
+
+
+    <script>
+
+    if('serviceWorker' in navigator){
+      navigator.serviceWorker.register('/sw.js').then(function(event){
+        console.log('yep!')
+        console.log(event)
+      }).catch(function(err){
+        console.log('fck')
+        console.log(err)
+      });
+    }
+
+    </script>
   </body>
 </html>
