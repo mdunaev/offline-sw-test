@@ -7,8 +7,8 @@ this.addEventListener('install', function(event){
 this.addEventListener('fetch', function(event){
 
   var headers = new Headers();
-  myHeaders.append('pragma', 'no-cache');
-  myHeaders.append('cache-control', 'no-cache');
+  headers.append('pragma', 'no-cache');
+  headers.append('cache-control', 'no-cache');
 
   var init = {
     method: 'GET',
