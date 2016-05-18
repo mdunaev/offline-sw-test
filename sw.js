@@ -7,6 +7,11 @@ this.addEventListener('install', function(event){
 this.addEventListener('fetch', function(event){
   console.log('fetch')
   console.log(event)
-  var response = new Response('<h1>Offline mode!</h1>')
-  event.respondWith(response)
+
+  fetch(event.request).catch(function(err){
+    var response = new Response('<h1>Offline mode!</h1>');
+    event.respondWith(response);
+  }.bind(this));
+
+  
 })
