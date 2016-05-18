@@ -9,7 +9,7 @@
     <script>
 
     if('serviceWorker' in navigator){
-      navigator.serviceWorker.register('/sw.js').then(function(event){
+      navigator.serviceWorker.register('/offline-sw-test/sw.js').then(function(event){
         console.log('yep!')
         console.log(event)
       }).catch(function(err){
