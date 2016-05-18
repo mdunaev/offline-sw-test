@@ -6,7 +6,7 @@ this.addEventListener('install', function(event){
 
 this.addEventListener('fetch', function(event){
   event.respondWith(
-    fetch(event.request.url+'#'+Math.random()).catch(function() {
+    fetch(event.request).catch(function() {
       return new Response("<html><body><h1>OFFLINE</h1></body></html>");
     })
   );
