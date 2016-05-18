@@ -12,12 +12,14 @@ this.addEventListener('fetch', function(event){
 
   var init = {
     method: 'GET',
-    headers: myHeaders,
+    headers: headers,
   };
 
   event.respondWith(
     fetch(event.request.url, init).catch(function() {
-      return new Response("<html><body><h1>OFFLINE</h1></body></html>");
+      return new Response("<html><body><h1>OFFLINE</h1></body></html>", {
+          headers: { 'Content-Type': 'text/html' }
+        });
     })
   );
 })
