@@ -7,6 +7,7 @@ this.addEventListener('install', function(event){
 this.addEventListener('fetch', function(event){
   console.log('fetch')
   console.log(event)
+  console.log('55555')
   return new Response('<h1>Offline mode!</h1>', {
       headers: { 'Content-Type': 'text/html' }
     });
