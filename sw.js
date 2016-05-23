@@ -1,11 +1,11 @@
-console.log('hallo 2!')
+console.log('hallo 3!')
 
 var time = new Date();
 
 
 this.addEventListener('install', function(event){
     setInterval(function(){
-      fetch('https://api.lenta.ru/lists/latest').then(function(data){
+      fetch('http://jsonplaceholder.typicode.com/users').then(function(data){
         console.log(data);
       }).catch(function(err){
         console.log('err');
