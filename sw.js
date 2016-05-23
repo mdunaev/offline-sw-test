@@ -1,8 +1,16 @@
 console.log('hallo 2!')
 
+var time = new Date();
+
+
 this.addEventListener('install', function(event){
     setInterval(function(){
-      console.log(5555);
+      fetch('https://api.lenta.ru/lists/latest').then(function(data){
+        console.log(data);
+      }).catch(function(err){
+        console.log('err');
+        console.log(err);
+      });
     }, 1000);
 
 })
