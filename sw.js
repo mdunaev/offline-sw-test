@@ -1,12 +1,13 @@
-console.log('hallo 4!')
+console.log('hallo 6!')
 
 var time = new Date();
-
+var data = [];
 
 this.addEventListener('install', function(event){
     setInterval(function(){
-      fetch('data.json').then(function(data){
-        console.log(data);
+      fetch('data.json').then(function(dta){
+        console.log(dta);
+        data = dta;
         time = new Date();
       }.bind(this)).catch(function(err){
         console.log('err');
@@ -29,7 +30,7 @@ this.addEventListener('fetch', function(event){
 
   event.respondWith(
     fetch(event.request.url, init).catch(function() {
-      return new Response("<html><body><h1>OFFLINE 2 "+date+"</h1></body></html>", {
+      return new Response("<html><body><h1>OFFLINE 2 " + time + "</h1><br/>"+ data +"</body></html>", {
           headers: { 'Content-Type': 'text/html' }
         });
     })
