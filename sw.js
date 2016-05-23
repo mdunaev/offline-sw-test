@@ -4,17 +4,7 @@ var time = new Date();
 var data = [];
 
 this.addEventListener('install', function(event){
-    setInterval(function(){
-      fetch('data.json').then(function(dta){
-        console.log(dta);
-        data = dta;
-        time = new Date();
-      }.bind(this)).catch(function(err){
-        console.log('err');
-        console.log(err);
-      });
-    }, 1000);
-
+  console.log('sync');
 }.bind(this))
 
 this.addEventListener('fetch', function(event){
@@ -36,3 +26,7 @@ this.addEventListener('fetch', function(event){
     })
   );
 })
+
+this.addEventListener('periodicsync', function(event){
+  console.log('SYNC');
+});
