@@ -1,7 +1,8 @@
-console.log('hallo from service worker!')
+console.log('hallo 2!')
 
 this.addEventListener('install', function(event){
-    console.log('installed!')
+    console.log('installed!');
+
 })
 
 this.addEventListener('fetch', function(event){
@@ -17,7 +18,7 @@ this.addEventListener('fetch', function(event){
 
   event.respondWith(
     fetch(event.request.url, init).catch(function() {
-      return new Response("<html><body><h1>OFFLINE</h1></body></html>", {
+      return new Response("<html><body><h1>OFFLINE 2</h1></body></html>", {
           headers: { 'Content-Type': 'text/html' }
         });
     })
