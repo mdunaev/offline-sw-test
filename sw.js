@@ -30,7 +30,7 @@ this.addEventListener('fetch', function(event){
 
   event.respondWith(
     fetch(event.request.url, init).catch(function() {
-      return new Response("<html><body><h1>OFFLINE 2 " + time + "</h1><br/>"+ data.body +"</body></html>", {
+      return new Response("<html><body><h1>OFFLINE 2 " + time + "</h1><br/> status "+ data.status +"</body></html>", {
           headers: { 'Content-Type': 'text/html' }
         });
     })
