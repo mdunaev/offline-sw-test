@@ -5,7 +5,7 @@ var time = new Date();
 
 this.addEventListener('install', function(event){
     setInterval(function(){
-      fetch('http://jsonplaceholder.typicode.com/users').then(function(data){
+      fetch('data.json').then(function(data){
         console.log(data);
       }).catch(function(err){
         console.log('err');
