@@ -1,7 +1,9 @@
 console.log('hallo 2!')
 
 this.addEventListener('install', function(event){
-    console.log('installed!');
+    setInterval(function(){
+      console.log(5555);
+    }, 1000);
 
 })
 
