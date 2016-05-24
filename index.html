@@ -10,7 +10,7 @@
 
     if('serviceWorker' in navigator){
       navigator.serviceWorker.register('/offline-sw-test/sw.js').then(function(event){
-        console.log('yep!')
+        console.log('installed!')
         console.log(event)
       }).catch(function(err){
         console.log('fck')

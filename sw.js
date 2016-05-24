@@ -1,15 +1,34 @@
-console.log('hallo 9!')
+console.log('hallo 10!')
 
 var time = new Date();
 var data = [];
 
 this.addEventListener('install', function(event){
+  console.log('INSTALL');
   setInterval(1000*60, function(){
     console.log(new Date())
   });
 }.bind(this))
 
+this.addEventListener('activate', function(event){
+  console.log('ACTIVATE');
+});
+
+this.addEventListener('message', function(event){
+  console.log('MESSAGE');
+});
+
+this.addEventListener('sync', function(event){
+  console.log('SYNC');
+});
+
+this.addEventListener('push', function(event){
+  console.log('PUSH');
+});
+
+
 this.addEventListener('fetch', function(event){
+  console.log('FETCH')
 
   var headers = new Headers();
   headers.append('pragma', 'no-cache');
