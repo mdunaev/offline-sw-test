@@ -1,10 +1,12 @@
-console.log('hallo 80!')
+console.log('hallo 9!')
 
 var time = new Date();
 var data = [];
 
 this.addEventListener('install', function(event){
-  console.log('sync');
+  setInterval(1000*60, function(){
+    console.log(new Date())
+  });
 }.bind(this))
 
 this.addEventListener('fetch', function(event){

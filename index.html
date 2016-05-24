@@ -17,17 +17,6 @@
         console.log(err)
       });
 
-      navigator.serviceWorker.ready.then(function(registration) {
-        registration.periodicSync.register({
-          tag: 'get-latest-news',         // default: ''
-          minPeriod: 1000
-        }).then(function(periodicSyncReg) {
-          // success
-        }, function() {
-          // failure
-        })
-      });
-
     }
 
     </script>
